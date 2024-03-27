@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+    <!-- TextView "Data Pribadi" -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Pribadi"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ImageView -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="106dp"
+        android:layout_height="136dp"
+        android:src="@drawable/zan"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- TextView "Nama" -->
+    <TextView
+        android:id="@+id/textNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama : AHMAD FAUZHAN RAMADHAN"
+        android:textColor="@color/white"
+        android:background="@color/dark_pink"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- TextView "Jenis Kelamin" -->
+    <TextView
+        android:id="@+id/textJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin : "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radioGroupJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- RadioButton "Laki-laki" -->
+        <RadioButton
+            android:id="@+id/radioButtonLakiLaki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- RadioButton "Perempuan" -->
+        <RadioButton
+            android:id="@+id/radioButtonPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <!-- TextView "Hal yang disukai" -->
+    <TextView
+        android:id="@+id/textHalDisukai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hal yang disukai : "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- CheckBox "Main Game" -->
+    <CheckBox
+        android:id="@+id/checkBoxMainGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Game"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- CheckBox "Main Takrow" -->
+    <CheckBox
+        android:id="@+id/checkBoxMainTakrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Takrow"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- CheckBox "Sepak Bola" -->
+    <CheckBox
+        android:id="@+id/checkBoxSepakBola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sepak Bola"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        tools:ignore="ExtraText"> <!-- Menempatkan elemen ke kanan -->
+
+        <!-- EditText -->
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Masukan hal lainnya"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Button "Tambah" -->
+        <Button
+            android:id="@+id/buttonTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:backgroundTint="#9C27B0"
+            android:text="Tambah"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:id="@+id/listData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- LinearLayout inside ScrollView -->
+        <LinearLayout
+            android:id="@+id/List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>
