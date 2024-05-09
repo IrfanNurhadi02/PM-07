@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Pribadi"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="#A8A5A5"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gambar1"
+        android:layout_width="129dp"
+        android:layout_height="159dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/gambar1" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gambar1"
+        android:background="#F37D7D"
+        android:padding="8dp"
+        android:text="Nama : Minhajul Yusri Khairi"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin:"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_below="@id/nama"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jenis"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/male_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            android:textColor="#C5C1C1"
+            android:textSize="20sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/female_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:textColor="#C5C1C1"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/suka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hal yang disukai:"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_below="@id/gender"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <CheckBox
+        android:id="@+id/game_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_below="@id/suka"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="30dp"/>
+
+    <CheckBox
+        android:id="@+id/money_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MONEY!!!"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_below="@id/game_checkbox"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="30dp"/>
+
+    <CheckBox
+        android:id="@+id/other_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lainnya"
+        android:textColor="#C5C1C1"
+        android:textSize="20dp"
+        android:layout_below="@id/money_checkbox"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/lainnya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/other_checkbox"
+        android:textColorHint="#C5C1C1"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        android:textColor="#C5C1C1"
+        android:hint="Masukkan hal lainnya" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lainnya"
+        android:layout_marginBottom="-53dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="OK" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lainnya"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/listinputan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
