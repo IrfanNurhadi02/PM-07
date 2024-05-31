@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.PostFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_chevron_left_24"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Postingan baru"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#f4f4f4"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_gambar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/iv_gambar"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:src="@drawable/outline_camera_alt_24"
+                android:layout_gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_caption"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundMode="none">
+
+            <EditText
+                android:id="@+id/et_caption"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Tulis keterangan..."
+                android:textColorHint="#81F4F4F4"
+                android:textColor="#f4f4f4"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:inputType="textMultiLine"
+                android:gravity="top|left"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#19FFFFFF"/>
+
+    <Button
+        android:id="@+id/btn_posting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Bagikan"
+        android:textColor="#f4f4f4"
+        android:backgroundTint="#1E88E4"
+        app:cornerRadius="8dp"
+        android:layout_margin="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/nav_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1AFFFFFF"
+            android:layout_above="@+id/nav"/>
+
+        <include
+            android:id="@+id/nav"
+            layout="@layout/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

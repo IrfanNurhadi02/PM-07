@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ketika ImageView sedang ditekan -->
+    <item android:drawable="@drawable/pressed_favorite_icon" android:state_pressed="true"/>
+    <!-- Default (ketika ImageView tidak ditekan) -->
+    <item android:drawable="@drawable/favorite_icon"/>
+</selector>
